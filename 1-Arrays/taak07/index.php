@@ -75,19 +75,22 @@
         ],
 
     ];
+    foreach($nieuwsberichten as $bericht){
+        echo  "<h1>" . $nieuwsberichten['0'] . "</h1>";
+        echo  '<div class="content">';
+        echo       '<h2 class="title">' . $bericht[0]['titel'] .'</h2>';
+        echo       '<p class="title">' . $bericht[0]['beschrijving'] .'</p>';
+        echo     '<img src="' .  $bericht[0]['image'] . '" class="title">';
+        echo       '<h2 class="title">' . $bericht[1]['titel'] .'</h2>';
+        echo       '<p class="title">' . $bericht[1]['beschrijving'] .'</p>';
+        echo     '<img src="' .  $bericht[1]['image'] . '" class="title">';
+        echo  "</div>";
+        };
     ?>
+
     <!-- Pas de code hieronder aan  -->
     <!-- Loop door de array $nieuwsberichten en toon de gegevens in de juist HTML-tags  -->
 
-
-    <h1></h1>
-    <div class="content">
-
-        <h2 class="title"></h2>
-        <p class="title"></p>
-        <img src="" class="title">
-
-    </div>
 
 
 </body>
