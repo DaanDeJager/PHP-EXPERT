@@ -7,11 +7,11 @@ $passdb = '';
 
   $conn = new PDO("mysql:host=$hostdb; dbname=$namedb", $userdb, $passdb);
 
-  $sql = "SELECT id FROM users";
+  $sql = "SELECT name, address, city FROM locations";
   $result = $conn->query($sql);
 
     foreach($result as $row) {
-      echo $row['id'].'<br>';
+      echo "<h2>" . $row['name'] . "</h2>" . "Adres:". $row['address']."<br> Stad:".$row['city'].'<br>';
     }
 
 
