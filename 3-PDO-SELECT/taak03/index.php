@@ -5,7 +5,7 @@ $userdb = 'root';
 $passdb = '';
 
 
-  $conn = new PDO("mysql:host=$hostdb; dbname=$namedb", $userdb, $passdb);
+$conn = new PDO("mysql:host=$hostdb; dbname=$namedb", $userdb, $passdb);
 
 $stmt = $conn->prepare("SELECT * FROM users WHERE firstname = 'Mohamed'");
 $stmt->execute();
