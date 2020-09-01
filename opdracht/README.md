@@ -16,10 +16,10 @@ De voetbalclub moet een administratiesysteem hebben van wie in welk team speelt 
 
 ### Database
 
-- [ ] Maak een database: `voetbalclubASD`
+- [X] Maak een database: `voetbalclubASD`
 
-- [ ] Maak een database tabel: `gebruikers`
-- [ ] Maak de volgende _kolommen_ aan:
+- [X] Maak een database tabel: `gebruikers`
+- [X] Maak de volgende _kolommen_ aan:
       - id (int:11)
       - voornaam (varchar:100)
       - achternaam (varchar:100)
@@ -27,19 +27,19 @@ De voetbalclub moet een administratiesysteem hebben van wie in welk team speelt 
       - wachtwoord (varchar:60)
       - team (int:3)
       - contributie (int:1)
-- [ ] Zet gegevens in deze tabel.
+- [X] Zet gegevens in deze tabel.
 
-- [ ] Maak nog een tabel: `teams`
-- [ ] Maak de volgende _kolommen_ aan:
+- [X] Maak nog een tabel: `teams`
+- [X] Maak de volgende _kolommen_ aan:
   - id (int:11)
   - naam (varchar:100)
-- [ ] Zet zelf bedachte gegevens in deze tabel.
+- [X] Zet zelf bedachte gegevens in deze tabel.
 
-- [ ] Maak een database bestand: db.conn.php
-- [ ] Maak een pagina om alle leden te kunnen tonen (overzichtspagina met een tabel)
-- [ ] Maak een pagina om teams te kunnen bekijken   (overzichtspagina met een tabel)
-- [ ] Maak een pagina om de gegevens van een enkele gebruiker te kunnen tonen (overzicht van een enkele rij)
-- [ ] Maak een pagina om de gegevens van een enkel team te kunnen tonen       (overzicht van een enkele rij)
+- [X] Maak een database bestand: db.conn.php
+- [X] Maak een pagina om alle leden te kunnen tonen (overzichtspagina met een tabel)
+- [X] Maak een pagina om teams te kunnen bekijken   (overzichtspagina met een tabel)
+- [X] Maak een pagina om de gegevens van een enkele gebruiker te kunnen tonen (overzicht van een enkele rij)
+- [X] Maak een pagina om de gegevens van een enkel team te kunnen tonen       (overzicht van een enkele rij)
 - [ ] Maak op elke regel van de eerder gemaakte tabellen een link waarmee je de rij kunt verwijderen
 - [ ] Maak een nog link op de gegenereerde rijen om naar een aparte pagina te gaan om deze data te kunnen updaten.
 

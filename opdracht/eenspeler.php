@@ -16,33 +16,39 @@ li{
 </ul>
 </li>
 <table>
-
+<form name="form" action="" method="post">
+  Speler ID:<input type="text" name="subject" id="subject">
+  <input type="submit">
+</form><br>
 <?php
-$naam = $_GET['subject'];
+$uid = ($_POST['subject']);
 $hostdb = 'localhost';
 $namedb = 'voetbalclubASD';
 $userdb = 'root';
 $passdb = '';
 
 
-  $conn = new PDO("mysql:host=$hostdb; dbname=$namedb", $userdb, $passdb);
+$conn = new PDO("mysql:host=$hostdb; dbname=$namedb", $userdb, $passdb);
 
-  $sql = $conn->prepare("SELECT * FROM users WHERE id = ?");
-  $sql->bindValue(1, $naam);
-  
-  while($row = $sql->fetch()){
+$stmt = $conn->prepare("SELECT * FROM users WHERE id = '$uid'");
+$stmt->execute();
+
+while($row = $stmt->fetch()){
     $firstname = $row['firstname'];
     $lastname = $row['lastname'];
     $email = $row['email'];
     $id = $row['id'];
-    $pw = $row['password'];
+    $pw = $row['wachtwoord'];
+    $team = $row['team'];
+    $contri = $row['contributie'];
 
-    echo $id;
-  }
+    echo "ID: " . $id . "<br>";
+    echo "Volledige Naam: " . $firstname . " " . $lastname . "<br>";
+    echo "Email: " . $email . "<br>";
+    echo "Password: " . $pw . "<br>";
+    echo "Team ID: " . $team . "<br>";
+    echo "Contributie: " . $contri . "<br>";
+}
+
+
 ?>
-</table>
-
-<form name="form" action="" method="GET">
-  Speler ID:<input type="text" name="subject" id="subject">
-  <input type="submit">
-</form>

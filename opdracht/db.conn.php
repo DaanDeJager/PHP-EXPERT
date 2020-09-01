@@ -33,7 +33,7 @@ $passdb = '';
   $sql = "SELECT id, firstname, lastname, email, wachtwoord, team, contributie FROM users";
   $result = $conn->query($sql);
     foreach($result as $row){
-      echo "<tr>". "<td>".$row['id'] . "</td><td>" . $row['firstname'] . "</td><td>" . $row['lastname'] . "</td><td>" . $row['email']. "<br>"."</td>"."</tr>";
+      echo "<tr>". "<td> ID: ".$row['id'] . "</td><td>voornaam: " . $row['firstname'] . "</td><td> achternaam: " . $row['lastname'] . "</td><td> email: " . $row['email']. "<br>"."</td>"."</tr>";
     }
 ?>
 </table>
