@@ -34,7 +34,8 @@ $passdb = '';
     $result1 = $conn->query($sql1);
   
       foreach($result1 as $row1) {
-        echo "<tr>"."<td> ID: ".$row1['id']."</td>"."<td> Naam: ".$row1['naam']."</td>"."</tr>";
+        $idname = $row1['id'];
+        echo "<tr>"."<td> ID: ".$row1['id']."</td>"."<td> Naam: ".$row1['naam']."</td><td>"."<a href='deleteteams.php'>delete row</a>"."</td>"."</tr>";
     }
   
 

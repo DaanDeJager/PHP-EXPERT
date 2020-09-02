@@ -37,7 +37,7 @@ while($row = $stmt->fetch()){
     $id = $row['id'];
     $naam = $row['naam'];
 
-    echo "ID: " .$id ."<br>". "Naam: ".$naam ;
+    echo "ID: " .$id ."<br>". "Naam: ".$naam ."<br>". "<a href='updateteam.php'>Update Info</a>";
 }
 
 

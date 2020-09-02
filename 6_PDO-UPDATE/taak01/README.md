@@ -25,7 +25,7 @@ $sql = "UPDATE users SET firstname = :ph_firstname";
 $stmt = $db_conn->prepare($sql); //stuur naar mysql.
 $stmt->bindParam(":firstname", $form_firstname );
 $stmt->execute();
-
+`
 ```
 
 ## Bronnen

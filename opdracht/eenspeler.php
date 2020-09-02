@@ -48,6 +48,7 @@ while($row = $stmt->fetch()){
     echo "Password: " . $pw . "<br>";
     echo "Team ID: " . $team . "<br>";
     echo "Contributie: " . $contri . "<br>";
+    echo "<a href='updatespelers.php'>Update Info</a>";
 }
 
 

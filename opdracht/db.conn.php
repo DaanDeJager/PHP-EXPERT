@@ -32,8 +32,15 @@ $passdb = '';
 
   $sql = "SELECT id, firstname, lastname, email, wachtwoord, team, contributie FROM users";
   $result = $conn->query($sql);
+  function delete(){
+    $stmt->execute();
+  }
     foreach($result as $row){
-      echo "<tr>". "<td> ID: ".$row['id'] . "</td><td>voornaam: " . $row['firstname'] . "</td><td> achternaam: " . $row['lastname'] . "</td><td> email: " . $row['email']. "<br>"."</td>"."</tr>";
+        $idname = $row['id'];
+      echo "<tr>". "<td> ID: ".$row['id'] . "</td><td>voornaam: " . $row['firstname'] . "</td><td> achternaam: " . $row['lastname'] . "</td><td> email: " . $row['email'] ."</td><td>"."<a href='delete.php'>delete row</a>" ."<br>"."</td>"."</tr>";
     }
 ?>
 </table>
+<?php
+
+?>
