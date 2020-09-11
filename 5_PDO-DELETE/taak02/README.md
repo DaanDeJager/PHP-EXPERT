@@ -18,7 +18,7 @@ Met een simpele SQL statement kun je dit bereiken.
 > 2. Maak een `<a>` aan die een GET request uitvoert naar `delete.php?id=1`
 > 3. Als je op delete.php komt voer je onderstaande code uit.
 > 4. Houd er rekening mee dat je parameters mee stuurt.
-> 5. Check PHPAdm   in of het product is verwijderd.
+> 5. Check PHPAdmin of het product is verwijderd.
 
 ```php
 $id = 1;// Het cijfer 1 moet jij vervangen voor een waarde uit de $_GET array.

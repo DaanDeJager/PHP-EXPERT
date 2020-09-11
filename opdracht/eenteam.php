@@ -1,44 +1,35 @@
-<style>
-*{
-    font-family: arial;
-}
-li{
-    list-style: none;
-}
 
-</style>
-<li>
-<ul>
-<a href="db.conn.php">Alle Leden</a>
-<a href="teams.php">Alle Teams</a>
-<a href="eenspeler.php">Zoek één speler</a>
-<a href="eenteam.php">Zoek één team</a>
-</ul>
-</li>
-<table>
-<form name="form" action="" method="post">
-  Team ID:<input type="text" name="subject" id="subject">
-  <input type="submit">
-</form><br>
 <?php
-$uid = ($_POST['subject']);
-$hostdb = 'localhost';
-$namedb = 'voetbalclubASD';
-$userdb = 'root';
-$passdb = '';
+include "conn.php";
+include "teams.php";
 
 
-$conn = new PDO("mysql:host=$hostdb; dbname=$namedb", $userdb, $passdb);
+echo "<br>";
+$uid = ($_GET['subject']);
 
 $stmt = $conn->prepare("SELECT * FROM teams WHERE id = '$uid'");
+
 $stmt->execute();
-
 while($row = $stmt->fetch()){
+    $name = $row['naam'];
     $id = $row['id'];
-    $naam = $row['naam'];
 
-    echo "ID: " .$id ."<br>". "Naam: ".$naam ."<br>". "<a href='updateteam.php'>Update Info</a>";
+
+    echo "<form name='form' method='get'>";
+    echo "id:"."<input type='number' name='subject' id='subject' value='$id'>"."<br>";
+    echo  "Naam:"."<input type='text' name='subject1' id='subject1' value='$name'>". "<br>";
+    echo " <input type='submit'>";
 }
+
+$uid = ($_GET['subject']);
+$name = ($_GET['subject1']);
+
+$stmt0 = $conn->prepare("UPDATE teams SET naam = '$name' WHERE id = '$uid'");
+
+
+
+$stmt0->execute();
 
 
 ?>
+

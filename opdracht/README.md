@@ -41,7 +41,7 @@ De voetbalclub moet een administratiesysteem hebben van wie in welk team speelt 
 - [X] Maak een pagina om de gegevens van een enkele gebruiker te kunnen tonen (overzicht van een enkele rij)
 - [X] Maak een pagina om de gegevens van een enkel team te kunnen tonen       (overzicht van een enkele rij)
 - [X] Maak op elke regel van de eerder gemaakte tabellen een link waarmee je de rij kunt verwijderen
-- [ ] Maak een nog link op de gegenereerde rijen om naar een aparte pagina te gaan om deze data te kunnen updaten.
+- [X] Maak een nog link op de gegenereerde rijen om naar een aparte pagina te gaan om deze data te kunnen updaten.
 
 ## Eindresultaat
 

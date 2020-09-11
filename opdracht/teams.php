@@ -11,31 +11,18 @@ li{
 }
 
 </style>
-<li>
-<ul>
-<a href="db.conn.php">Alle Leden</a>
+<a href="home.php">Alle Leden</a>
 <a href="teams.php">Alle Teams</a>
-<a href="eenspeler.php">Zoek één speler</a>
-<a href="eenteam.php">Zoek één team</a>
-</ul>
-</li>
 <table>
 
 <?php
-$hostdb = 'localhost';
-$namedb = 'voetbalclubASD';
-$userdb = 'root';
-$passdb = '';
-
-
-  $conn = new PDO("mysql:host=$hostdb; dbname=$namedb", $userdb, $passdb);
-
+include "conn.php";
     $sql1 = "SELECT id, naam FROM teams";
     $result1 = $conn->query($sql1);
   
       foreach($result1 as $row1) {
         $idname = $row1['id'];
-        echo "<tr>"."<td> ID: ".$row1['id']."</td>"."<td> Naam: ".$row1['naam']."</td><td>"."<a href='deleteteams.php'>delete row</a>"."</td>"."</tr>";
+        echo "<tr>"."<td> ID: ".$row1['id']."</td>"."<td> Naam: ".$row1['naam']."</td><td>"."<a href='deleteteam.php?subject=$idname'>delete row</a>"."<br>"."</td>"."</td><td>"."<a href='eenteam.php?subject=$idname'>inspect row</a>"."<br>"."</td>"."</tr>";
     }
   
 
